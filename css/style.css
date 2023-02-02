@@ -6,9 +6,10 @@
     transition: background-color 4s;
 }
 
-.ex-1-square:hover{
+.ex-1-square:hover {
     background-color: red;
 }
+
 /* /Esercizio 1 */
 
 /* Esercizio 2 */
@@ -19,9 +20,10 @@
     transition: width 2s;
 }
 
-.ex-2-square:active{
+.ex-2-square:active {
     width: 100%;
 }
+
 /* /Esercizio 2 */
 
 /* Esercizio 3 */
@@ -35,6 +37,7 @@
 .ex-3-square:hover {
     border-radius: 50%;
 }
+
 /* /Esercizio 3 */
 
 /* Esercizio 4 */
@@ -45,10 +48,11 @@
     transition: opacity 2s;
 }
 
-.ex-4-square:hover{
+.ex-4-square:hover {
     opacity: 0;
 
 }
+
 /* /Esercizio 4 */
 
 /* Esercizio 5 */
@@ -60,42 +64,49 @@
     transition: transform 2s;
 }
 
-.ex-5-square:hover{
+.ex-5-square:hover {
     transform: scale(2);
 }
 
-.ex-5-square:active{
+.ex-5-square:active {
     transform: scale(0.5);
 }
+
 /* /Esercizio 5 */
-.ex-6-img, .ex-7-img, .ex-8-img {
+.ex-6-img,
+.ex-7-img,
+.ex-8-img {
     width: 500px;
 }
+
 /* Esercizio 6 */
-.ex-6-img:hover{
+.ex-6-img:hover {
     filter: grayscale();
 }
+
 /* /Esercizio 6 */
 
 /* Esercizio 7 */
-.ex-7-img{
+.ex-7-img {
     transition: filter 2s;
 }
 
-.ex-7-img:hover{
+.ex-7-img:hover {
     filter: sepia(1) invert(0.8);
 }
+
 /* /Esercizio 7 */
 
 /* Esercizio 8 */
-.ex-8-img{
-    transition: filter 3s, border-radius 3s;
+.ex-8-img {
+    transition: 3s;
 }
 
-.ex-8-img:hover{
+.ex-8-img:hover {
     filter: hue-rotate(90deg) sepia(0.8);
     border-radius: 10%;
 }
+
 /* /Esercizio 8 */
 
 /* Esercizio 9 */
@@ -105,18 +116,60 @@
     transition: 1s;
 }
 
-.ex-9-img:hover{
+.ex-9-img:hover {
     transform: scale(1.5);
     border-radius: 5%;
 }
+
 /* /Esercizio 9 */
+
+/* Esercizio 10 */
 .ex-10-icon {
     font-size: 60px;
+    animation-name: loading-one;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
 }
+
+@keyframes loading-one {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* /Esercizio 10 */
+
+/* Esercizio 11 */
 .ex-11-icon {
     font-size: 60px;
 }
-.ex-12-button, .ex-13-button {
+
+.ex-11-icon:hover {
+    animation-duration: 2s;
+    animation-name: loading-two;
+}
+
+@keyframes loading-two {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    90% {
+        transform: rotate(315deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* /Esercizio 11 */
+.ex-12-button,
+.ex-13-button {
     position: relative;
     display: block;
     width: 200px;
@@ -129,19 +182,148 @@
     text-align: center;
     text-decoration: none;
 }
-.ex-12-top-white, .ex-13-top-white {
+
+/* Spazi Bianchi */
+.ex-12-top-white,
+.ex-13-top-white {
     position: absolute;
     top: -10px;
     left: 10%;
     background: #f5f5f5;
     width: 60px;
+    /*larghezza */
     height: 20px;
 }
-.ex-12-bottom-white, .ex-13-bottom-white {
+
+.ex-12-bottom-white,
+.ex-13-bottom-white {
     position: absolute;
     bottom: -10px;
     right: 20%;
     background: #f5f5f5;
     width: 60px;
+    /*larghezza */
     height: 20px;
 }
+
+/* Esercizio 12 */
+.ex-12-button:hover .ex-12-top-white {
+    animation-name: bottone-sopra;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+.ex-12-button:hover .ex-12-bottom-white {
+    animation-name: bottone-sotto;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+@keyframes bottone-sopra {
+    0% {
+        left: 10%;
+    }
+
+    50% {
+        left: calc(100% - 60px);
+    }
+
+    100% {
+        left: 10%;
+    }
+}
+
+@keyframes bottone-sotto {
+    0% {
+        right: 10%;
+    }
+
+    50% {
+        right: calc(100% - 60px);
+    }
+
+    100% {
+        right: 10%;
+    }
+}
+
+/* /Esercizio 12 */
+
+/* Esercizio 13 */
+.ex-13-button:hover .ex-13-top-white {
+    animation-name: bottone-sopra-due;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+.ex-13-button:hover .ex-13-bottom-white {
+    animation-name: bottone-sotto-due;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+@keyframes bottone-sopra-due {
+    0% {
+        left: 10%;
+        top: -10px;
+    }
+
+    30% {
+        left: calc(100% - 30px);
+        top: -10px;
+    }
+
+    45% {
+        left: calc(100% - 30px);
+        top: 100%;
+    }
+
+    75% {
+        left: 0;
+        top: 100%;
+    }
+
+    90% {
+        left: -15px;
+        top: -10px;
+    }
+
+    100% {
+        left: 10%;
+        top: -10px;
+    }
+}
+
+@keyframes bottone-sotto-due {
+    0% {
+        right: 10%;
+        bottom: -10px;
+    }
+
+    30% {
+        right: calc(100% - 30px);
+        bottom: -10px;
+    }
+
+    45% {
+        right: calc(100% - 30px);
+        bottom: 100%;
+    }
+
+    75% {
+        right: 0;
+        bottom: 100%;
+    }
+
+    90% {
+        right: -15px;
+        bottom: -10px;
+    }
+
+    100% {
+        right: 10%;
+        bottom: -10px;
+    }
+}
+
+/* /Esercizio 13 */
